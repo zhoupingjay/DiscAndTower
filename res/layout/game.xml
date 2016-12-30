@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_game"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_cursor"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:id="@+id/img_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/discmove"
+        android:visibility="invisible">
+    </ImageView>
+</AbsoluteLayout>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="@string/txtPuzzle"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:text="@+id/puzzle"
+            android:id="@+id/txtPuzzle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8pt"></TextView>
+        <TextView
+            android:text="@string/txtStep"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:text="@+id/steps"
+            android:id="@+id/txtSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <Button
+                android:text="@string/btnUndo"
+                android:id="@+id/btnUndo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></Button>
+            <Button
+                android:text="@string/btnRestart"
+                android:id="@+id/btnRestart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></Button>
+<!--            <Button-->
+<!--                android:text="@string/btnHelp"-->
+<!--                android:id="@+id/btnHelp"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"></Button>-->
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+            android:id="@+id/layout_ad"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/AdHeight"
+            android:gravity="right"
+            android:orientation="vertical">
+            <!-- Include AdMob banner here -->
+<!--            <TextView-->
+<!--                android:text="AdMob banner"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"></TextView>-->
+
+<!--            <com.google.ads.AdView android:id="@+id/adView"-->
+<!--                         android:layout_width="wrap_content"-->
+<!--                         android:layout_height="wrap_content"-->
+<!--                         ads:adUnitId="a14de87ca819bb2"-->
+<!--                         ads:adSize="BANNER"-->
+<!--                         ads:loadAdOnCreate="true" />-->
+        </LinearLayout>
+
+        <!-- Put the three tower views here -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_towers"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:orientation="vertical">
+                <com.myproj.discandtower.TowerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/tower0" />
+            </LinearLayout>
+            
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                <com.myproj.discandtower.TowerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/tower1" />
+            </LinearLayout>
+            
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+                <com.myproj.discandtower.TowerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/tower2" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtGameOver"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:textSize="14pt"
+    android:textStyle="bold"
+    android:textColor="#FFFF0000"
+    android:text="@string/txtWin"
+    android:background="#20000000"
+    android:visibility="invisible"
+    >
+</TextView>
+
+</FrameLayout>

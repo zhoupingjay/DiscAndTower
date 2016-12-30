@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, DiscAndTowerActivity!</string>
+    <string name="app_name">Disks and Towers</string>
+    <string name="txtSelectPuzzle">Select a Puzzle</string>
+    <string name="btnBack">Back</string>
+    <string name="btnUndo">Undo</string>
+    <string name="btnRestart">Restart</string>
+    <string name="txtPuzzle">Puzzle:</string>
+    <string name="txtStep">Steps:</string>
+    <string name="btnHelp">Help</string>
+    <string name="btnExit">Exit</string>
+    <string name="txtWin">Puzzle Solved</string>
+    <string name="txtHelp">
+        Your goal is to move all disks into one tower and arrange them in ascending order.
+        Move one disk a time by dragging disk from one tower to another.
+        Larger disk cannot be put on top of smaller ones.
+        Unless specified, your final disk tower does not have to be the same (leftmost) one as in the beginning.\n
+        Enjoy!
+    </string>
+    <string name="txtAuthor">
+        Developed by My Little Android Projects\n
+        http://sites.google.com/site/myandroidprojects
+    </string>
+</resources>
